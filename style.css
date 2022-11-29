@@ -1,0 +1,27 @@
+*body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calculator{
+    border: medium solid rgb(0, 225, 255);
+    background-color:brown;
+    box-shadow: -1opx 10px 10px hotpink;
+    height: 60vh;
+    width: 380px;
+    gap: 2px 2px;
+    padding: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    border-radius: 10px;
+}
+
+input{
+    grid-column: span 4;
+}
+.equal{
+    grid-column: span 2;
+}
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/calculator.css">
+</head>
+<body>
+    <div class="contaimer">
+        <div class="calculator">
+            <input type="text" id="screen">
+            <button onclick="cl()">cl</button>
+            <button onclick="Ac()">Ac</button>
+            <button onclick="del()">del</button>
+            <button onclick="num('%')">%</button>
+            <button onclick="num(1)">1</button>
+            <button onclick="num(2)">2</button>
+            <button onclick="num(3)">3</button>
+            <button onclick="num(4)">4</button>
+            <button onclick="num(5)">5</button>
+            <button onclick="num(6)">6</button>
+            <button onclick="num(7)">7</button>
+            <button onclick="num(8)">8</button>
+            <button onclick="num(9)">9</button>
+            <button onclick="num(0)">0</button>
+            <button onclick="num('+')">+</button>
+            <button onclick="num('-')">-</button>
+            <button onclick="num('*')">*</button>
+            <button onclick="num('/')">/</button>
+            <button onclick="equal()" class="equal">=</button>
+
+            <script>
+                function num(sqi) {
+                    document.getElementById('screen').value += sqi
+                }
+                function Ac() {
+                    document.getElementById('screen').value= ""
+                    
+                }
+                function del() {
+                    document.getElementById('screen').value=  document.getElementById('screen').value.slice(0,-1)
+                    
+                }
+                function equal() {
+                    try{
+                        document.getElementById('screen').value= eval( document.getElementById('screen').value)
+                    }catch(erro){
+                        alert('invalid input')
+                        Ac()
+                    }
+                    
+                }
+            </script>
+
+        </div>
+    </div> 
+
+    
+</body>
+</html>
